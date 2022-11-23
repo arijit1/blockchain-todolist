@@ -92,3 +92,6 @@ There is a bit more information in the [CONTRIBUTING.md](./CONTRIBUTING.md) file
    | todolist.taskCount()
    | taskCount = await todolist.taskCount()
    | taskCount.toNumber()
+
+
+<img width="1146" alt="image" src="https://user-images.githubusercontent.com/8938634/203588099-240dc55e-4204-49d8-aa79-4f6bd66066a0.png">
