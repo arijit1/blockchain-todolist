@@ -1,88 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>BlockChain ToDoList MINHACK</title>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>BlockChain ToDoList MINHACK</title>
+    <style>
+      main {
+        margin-top: 60px;
+      }
 
-  <!-- Bootstrap -->
-  <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      #content {
+        display: none;
+      }
 
-  <style>
-    main {
-      margin-top: 60px;
-    }
+      form {
+        width: 350px;
+        margin-bottom: 10px;
+      }
 
-    #content {
-      display: none;
-    }
+      ul {
+        margin-bottom: 0px;
+      }
 
-    form {
-      width: 350px;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      margin-bottom: 0px;
-    }
-
-    #completedTaskList .content {
-      color: grey;
-      text-decoration: line-through;
-    }
-  </style>
-</head>
-<!-- <script src=”https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js”></script>
+      #completedTaskList .content {
+        color: grey;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <!-- <script src=”https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js”></script>
     <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>. -->
-
-<body>
-  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="https://github.com/arijit1" target="_blank">My First DAPP</a>
-    <ul class="navbar-nav px-3">
-      <li class="nav-item ">
-        <small><a class="nav-link" href="#"><span id="account"></span></a></small>
-      </li>
-    </ul>
-  </nav>
-  <div class="container-fluid">
-    <div class="container">
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="https://github.com/arijit1" target="_blank">My First DAPP</a>
+      <ul class="navbar-nav px-3">
+        <li class="nav-item ">
+          <small><a class="nav-link" href="#"><span id="account"></span></a></small>
+        </li>
+      </ul>
+    </nav>
+    <div class="container-fluid">
       <div class="row">
-        <div id="loader" class="text-center">
-          <p class="text-center">Loading...</p>
-        </div>
-        <div id="content">
-          <form onSubmit="App.createTask(); return false;">
-            <input id="newTask" type="text" class="form-control" placeholder="Add task..." required>
-            <br>
-            <button type="submit" class="btn btn-info"> Task </button>
-          </form>
-          <ul id="taskList" class="list-unstyled">
-            <div class="taskTemplate" class="checkbox" style="display: none">
-              <label>
-                <input type="checkbox" />
-                <span class="content">Task content goes here...</span>
-              </label>
-            </div>
-          </ul>
-          <p>Completed Task List</p>
-          <ul id="completedTaskList" class="list-unstyled">
-          </ul>
-        </div>
+        <main role="main" class="col-lg-12 d-flex justify-content-center">
+          <div id="loader" class="text-center">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content">
+            <form onSubmit="App.createTask(); return false;">
+              <input id="newTask" type="text" class="form-control" placeholder="Add task..." required>
+              <br>
+              <button type="submit" class="btn btn-info"> Task </button>
+            </form>
+            <ul id="taskList" class="list-unstyled">
+              <div class="taskTemplate" class="checkbox" style="display: none">
+                <label>
+                  <input type="checkbox" />
+                  <span class="content">Task content goes here...</span>
+                </label>
+              </div>
+            </ul>
+            <p>Completed Task List</p>
+            <ul id="completedTaskList" class="list-unstyled">
+            </ul>
+          </div>
+        </main>
       </div>
     </div>
-  </div>
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/web3@1.2.2/dist/web3.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="vendor/@truffle/contract/browser-dist/truffle-contract.min.js"></script>
- 
-  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="app.js"></script>
-</body>
-
+   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="https://cdn.jsdelivr.net/npm/web3@1.2.2/dist/web3.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="vendor/@truffle/contract/browser-dist/truffle-contract.min.js"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script src="app.js"></script>
+  </body>
 </html>
